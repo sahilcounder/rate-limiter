@@ -23,7 +23,7 @@ That's it. If a user exceeds 100 calls per minute, the request is rejected with 
 - **SLIDING_WINDOW_LOG** — Most accurate, slightly heavier on memory.
 - **FIXED_WINDOW** — Simplest. Has edge-case inaccuracy at window boundaries.
 
-If you don't know which to pick, use TOKEN_BUCKET.
+If you don't know which to pick, go with TOKEN_BUCKET. Fixed window has a known edge case at window boundaries so avoid it for strict APIs.
 
 ## Running
 
